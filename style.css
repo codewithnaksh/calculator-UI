@@ -1,0 +1,114 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html , body{
+    height: 100%;
+    width: 100%;
+}
+main{
+    background-color: #3b3b3f;
+    width: 100%;
+    min-height: 100%;
+    max-height: ;
+    padding: 1rem;  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#calc{
+    border: 5px solid #e3e3e8;
+    background-color: #e3e3e8;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+#display{
+    width: 100%;
+    background-color: #333;   
+    color: #fff; 
+    padding: 1.5rem 1rem;
+    text-align: end;
+    font-size: 1.5rem;
+}
+#buttons{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.button{
+    font-size: 1rem;
+    border: 1px solid gray;
+    flex: 1;
+    aspect-ratio: 1/1;
+    font-weight: bold;
+    cursor: pointer;
+}
+.button:active {
+    transform: scale(0.95);
+    transition: transform 0.1s ease-in-out;
+}
+#result{
+    width: 100%;
+    background-color: #337deb;
+}
+#result > button {
+    width: 100%;
+    background-color: transparent;
+    padding: .55em 0;
+    font-size: 1.5rem;
+    border: none;
+}
+.row{
+    width: 100%;
+    display: flex;
+}
+.orange{
+    background-color: #fe8d50;
+    color: #fff;
+}
+#special .brown{
+    background-color: #7b3719;
+    color: #fff;
+    aspect-ratio: unset;
+    align-self: stretch;
+}
+#special > .left > .zero{
+    width: calc(100% / 3 * 2) ;
+    aspect-ratio: unset;
+}
+#special{
+    display: flex;
+}
+.left{
+    display: flex;
+    flex-wrap: wrap;
+    width: calc(100% / 4 * 3);
+    /* background-color: red; */
+    gap: 0;
+}
+.right{
+    width: calc(100%/4);
+    display: flex;
+}
+#special > .left > button{
+    width: calc(100% / 3);
+    flex: none;
+    margin: 0;
+}
+#special > .right > button{
+    width: 100%;
+}
+.clear{
+    background-color: #9c9c9c;
+}
+
+
+@media screen and (min-width : 768px) {
+    #calc{
+        max-width: 400px;
+    }
+}
+
